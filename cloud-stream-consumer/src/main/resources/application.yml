@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    stream:
+      function:
+        definition: consumer
+      bindings:
+        consumer-in-0: # входной канал Consumer; 0 - это № Partition, откуда читаются сообщения
+          destination: squares  # названия Topic, откуда читаются сообщения
+
+server:
+  port: 8087

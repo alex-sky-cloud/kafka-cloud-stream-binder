@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    stream:
+      function:
+        definition: producer
+      bindings:
+        producer-out-0: # # выходной канал Producer; 0 - это № Partition, куда публикуются сообщения
+          destination: numbers # названия Topic, куда публикуются сообщения
+
+server:
+  port: 8085
